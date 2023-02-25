@@ -27,7 +27,7 @@ class Loader extends PluginBase {
         $register->registerEvents(new Iron(), $this);
     }
     
-    public function commands(){
+    public function registerCommands(){
         $register = $this->getServer()->getCommandMap();
         $register->register("customblock", new ore($this));
     }
