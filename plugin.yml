@@ -5,5 +5,5 @@ main: CustomBlock\Loader
 author: [ChillatoDev, Akari_my]
 
 permession:
-   description: Ore Command
-   default: op
+  description: Ore Command
+  default: op
