@@ -11,13 +11,13 @@ use pocketmine\command\CommandSender;
 use pocketmine\item\ItemIds;
 use pocketmine\item\VanillaItems;
 use pocketmine\player\Player;
-use CustomBlock\Main;
+use CustomBlock\Loader;
 
 class ore extends Command{
 
-    protected Main $plugin;
+    protected Loader $plugin;
 
-    public function __construct(Main $plugin){
+    public function __construct(Loader $plugin){
         $this->plugin = $plugin;
         parent::__construct("ore", "Ore Command");
         $this->setPermission("skywarsplus.ore.command");
