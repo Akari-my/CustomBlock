@@ -2,7 +2,7 @@ name: CustomBlock
 version: 1.0.0-BETA
 api: 4.0.0
 main: CustomBlock\Loader
-author: [ChillatoDev, Akari_my]
+author: [Akari_my]
 
 permession:
   description: Ore Command
