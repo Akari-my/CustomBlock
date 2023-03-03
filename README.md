@@ -1,6 +1,9 @@
 # CustomBlock
 Addon For Minigames
 
+
+ATTENTION THIS IS THE ORIGINAL PLUGIN!  EVERYONE ELSE ON THE INTERNET IS A COPY / FAKE
+
 # Dependency
 - InvMenu
 - DeVerion
@@ -10,4 +13,3 @@ Addon For Minigames
 
 # Developers
 - Akari-my
-- Chillato
