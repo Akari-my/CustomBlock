@@ -14,7 +14,7 @@ class Loader extends PluginBase {
     public static $prefix = "§8[§cCustom§bBlock§8] §f> ";
 
     public function onEnable() : void {
-        $this->getServer()->getLogger()->info("§8[§cCustom§bBlock§8]\n-> Developed By Akari and Chillato\n-> Version GUI\n-> Version UI https://github.com/Chillato/CustomBlock-PMMP\n§8[§cCustom§bBlock§8]");
+        $this->getServer()->getLogger()->info("§8[§cCustom§bBlock§8]\n-> Developed By Akari\n§8[§cCustom§bBlock§8]");
         $this->registerEvents();
         $this->registerCommands();
     }
