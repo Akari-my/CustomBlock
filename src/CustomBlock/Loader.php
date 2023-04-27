@@ -7,6 +7,7 @@ use CustomBlock\event\Dimaond;
 use CustomBlock\event\Emerald;
 use CustomBlock\event\Gold;
 use CustomBlock\event\Iron;
+use muqsit\invmenu\InvMenuHandler;
 use pocketmine\plugin\PluginBase;
 
 class Loader extends PluginBase {
@@ -14,6 +15,9 @@ class Loader extends PluginBase {
     public static $prefix = "§8[§cCustom§bBlock§8] §f> ";
 
     public function onEnable() : void {
+        if(!InvMenuHandler::isRegistered()){
+            InvMenuHandler::register($this);
+        }
         $this->getServer()->getLogger()->info("§8[§cCustom§bBlock§8]\n-> Developed By Akari\n§8[§cCustom§bBlock§8]");
         $this->registerEvents();
         $this->registerCommands();

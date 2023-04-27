@@ -33,22 +33,22 @@ class GuiOre {
 
             if($transaction->getOut()->getId() === ItemIds::DIAMOND){
                 $player->getInventory()->addItem(VanillaBlocks::DIAMOND_ORE()->asItem()->setCount(64));
-                $player->sendMessage(Loader::$prefix . "Hai ricevuto uno Stack di §bDiamond Ore§7!");
+                $player->sendMessage(Loader::$prefix . "§7You have received a Stack of §bDiamond Ore§7!");
                 return $transaction->discard();
             }
             if($transaction->getOut()->getId() === ItemIds::EMERALD){
                 $player->getInventory()->addItem(VanillaBlocks::EMERALD_ORE()->asItem()->setCount(64));
-                $player->sendMessage(Loader::$prefix . "§7Hai ricevuto uno Stack di §aEmerald Ore§7!");
+                $player->sendMessage(Loader::$prefix . "§7You have received a Stack of §aEmerald Ore§7!");
                 return $transaction->discard();
             }
             if($transaction->getOut()->getId() === ItemIds::GOLD_INGOT){
                 $player->getInventory()->addItem(VanillaBlocks::GOLD_ORE()->asItem()->setCount(64));
-                $player->sendMessage(Loader::$prefix . "§7Hai ricevuto uno Stack di §eGold Ore§7!");
+                $player->sendMessage(Loader::$prefix . "§7You have received a Stack of §eGold Ore§7!");
                 return $transaction->discard();
             }
             if($transaction->getOut()->getId() === ItemIds::IRON_INGOT){
                 $player->getInventory()->addItem(VanillaBlocks::IRON_ORE()->asItem()->setCount(64));
-                $player->sendMessage(Loader::$prefix . "§7Hai ricevuto uno Stack di §fIron Ore§7!");
+                $player->sendMessage(Loader::$prefix . "§7You have received a Stack of §fIron Ore§7!");
                 return $transaction->discard();
             }
 

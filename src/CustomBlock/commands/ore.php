@@ -18,11 +18,12 @@ class ore extends Command{
         $this->setPermission("skywarsplus.ore.command");
     }
 
-    public function execute(CommandSender $sender, string $commandLabel, array $args){
+    public function execute(CommandSender $sender, string $commandLabel, array $args): bool{
         if (!$sender instanceof Player){
-            $sender->sendMessage(Loader::$prefix . "Questo comando può essere eseguito solo in gioco");
+            $sender->sendMessage(Loader::$prefix . "This command can only be executed in game");
         } else {
-            GuiOre::gui($sender);
+            $ore = new GuiOre();
+            $ore->gui($sender);
         }
         return true;
     }
