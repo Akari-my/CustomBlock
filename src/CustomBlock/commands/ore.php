@@ -22,7 +22,7 @@ class ore extends Command{
         if (!$sender instanceof Player){
             $sender->sendMessage(Loader::$prefix . "This command can only be executed in game");
         } else {
-            $ore = new GuiOre();
+            $ore = new GuiOre($this->plugin);
             $ore->gui($sender);
         }
         return true;

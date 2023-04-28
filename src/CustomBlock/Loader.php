@@ -21,6 +21,8 @@ class Loader extends PluginBase {
         $this->getServer()->getLogger()->info("§8[§cCustom§bBlock§8]\n-> Developed By Akari\n§8[§cCustom§bBlock§8]");
         $this->registerEvents();
         $this->registerCommands();
+
+        $this->saveResource("config.yml");
     }
     
     public function registerEvents(){
