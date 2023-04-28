@@ -1,0 +1,12 @@
+inventory:
+  guiore:
+    title: "GUI Ore"
+    diamond_item: "Diamond Ore"
+    emerald_item: "Emerald Ore"
+    gold_item: "Gold Ore"
+    iron_item: "Iron Ore"
+    slots:
+      diaslot: 10
+      emeslot: 12
+      goldslot: 14
+      ironslot: 16

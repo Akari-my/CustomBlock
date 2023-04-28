@@ -1,9 +1,10 @@
 name: CustomBlock
-version: 1.0.0-BETA
+version: 1.5.0
 api: 4.0.0
 main: CustomBlock\Loader
 author: [Akari_my]
 
-permession:
-  description: Ore Command
-  default: op
+permissions:
+  skywarsplus.ore.command:
+    description: Ore Command
+    default: op

@@ -9,6 +9,7 @@ use CustomBlock\event\Gold;
 use CustomBlock\event\Iron;
 use muqsit\invmenu\InvMenuHandler;
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\TextFormat as TF;
 
 class Loader extends PluginBase {
 
@@ -18,11 +19,18 @@ class Loader extends PluginBase {
         if(!InvMenuHandler::isRegistered()){
             InvMenuHandler::register($this);
         }
-        $this->getServer()->getLogger()->info("§8[§cCustom§bBlock§8]\n-> Developed By Akari\n§8[§cCustom§bBlock§8]");
+
+        $this->getLogger()->info(TF::RED . "==========( CUSTOMBLOCK )=========");
+        $this->getLogger()->info(TF::GRAY . "» Version: " . $this->getDescription()->getVersion());
+        $this->getLogger()->info(TF::GRAY . "» Author: Akari_my");
+        $this->getLogger()->info(TF::GRAY . "» Support: https://discord.gg/hcQCmsvE");
+        $this->getLogger()->info(TF::RED . "==========( CUSTOMBLOCK )=========");
+
         $this->registerEvents();
         $this->registerCommands();
 
-        $this->saveResource("config.yml");
+        $this->saveResource("message.yml");
+        $this->saveResource("inventory.yml");
     }
     
     public function registerEvents(){

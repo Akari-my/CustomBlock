@@ -21,7 +21,7 @@ class GuiOre {
     }
 
     public function gui(Player $player){
-        $data = new Config($this->plugin->getDataFolder() . "config.yml", Config::YAML);
+        $data = new Config($this->plugin->getDataFolder() . "inventory.yml", Config::YAML);
         $menu = InvMenu::create(InvMenu::TYPE_CHEST);
         $menu->setName($data->getNested("inventory.guiore.title"));
 
@@ -38,32 +38,32 @@ class GuiOre {
 
         $menu->setListener(function(InvMenuTransaction $transaction) : InvMenuTransactionResult{
             $player = $transaction->getPlayer();
-            $data = new Config($this->plugin->getDataFolder() . "config.yml", Config::YAML);
+            $data = new Config($this->plugin->getDataFolder() . "message.yml", Config::YAML);
 
             if($transaction->getOut()->getId() === ItemIds::DIAMOND){
                 $player->getInventory()->addItem(VanillaBlocks::DIAMOND_ORE()->asItem()->setCount(64));
-                $player->sendMessage($data->getNested("message.diamandore"));
+                $player->sendMessage(Loader::$prefix . $data->get("diamondore"));
                 return $transaction->discard();
             }
             if($transaction->getOut()->getId() === ItemIds::GOLD_INGOT){
                 $player->getInventory()->addItem(VanillaBlocks::GOLD_ORE()->asItem()->setCount(64));
-                $player->sendMessage($data->getNested("message.goldore"));
+                $player->sendMessage(Loader::$prefix . $data->get("goldore"));
                 return $transaction->discard();
             }
             if($transaction->getOut()->getId() === ItemIds::IRON_INGOT){
                 $player->getInventory()->addItem(VanillaBlocks::IRON_ORE()->asItem()->setCount(64));
-                $player->sendMessage($data->getNested("message.ironore"));
+                $player->sendMessage(Loader::$prefix . $data->get("ironore"));
                 return $transaction->discard();
             }
             if($transaction->getOut()->getId() === ItemIds::EMERALD){
                 $player->getInventory()->addItem(VanillaBlocks::EMERALD_ORE()->asItem()->setCount(64));
-                $player->sendMessage($data->getNested("message.emeraldore"));
+                $player->sendMessage(Loader::$prefix . $data->get("emeraldore"));
                 return $transaction->discard();
             }
 
             return $transaction->continue();
         });
 
-        $menu->send($player, "Ore GUI");
+        $menu->send($player, $data->getNested("inventory.guiore.title"));
     }
 }
