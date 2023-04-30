@@ -5,6 +5,6 @@ main: CustomBlock\Loader
 author: [Akari_my]
 
 permissions:
-  skywarsplus.ore.command:
+  customblock.ore.command:
     description: Ore Command
     default: op
