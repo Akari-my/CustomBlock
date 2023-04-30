@@ -15,7 +15,7 @@ class ore extends Command{
     public function __construct(Loader $plugin){
         $this->plugin = $plugin;
         parent::__construct("ore", "Ore Command");
-        $this->setPermission("skywarsplus.ore.command");
+        $this->setPermission("customblock.ore.command");
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool{
